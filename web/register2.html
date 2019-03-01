@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>注册</title>
+        <script language="Javascipt" type="text/javascript">
+            function show(){
+                var UserName=document.getElementById("UserName").value;
+                var sex="man";
+                var location="CQ";
+
+                localStorage.setItem('UserName',UserName);
+                localStorage.setItem('sex',sex);
+                localStorage.setItem('location',location);
+
+                window.location.href="register3.html";           
+            }
+        </script>
+        <style>
+            .register2{
+                margin:0;
+                background: url(https://img.t.sinajs.cn/t5/style/images/register/reg_repeat_bg.png?id=1370232467958);
+            }
+
+            .Inroll_upward{
+                height: 41px;
+                border-bottom: 1px solid red;
+                background-color: #333;
+            }
+
+            .web_Logo{
+                margin:0 auto;
+                position: relative;
+                width: 900px;
+            }
+
+            .Logo{
+                position: absolute;
+                width: 190px;
+                height: 39px;
+                margin:0 0 0 29px;
+                background: url(https://img.t.sinajs.cn/t5/style/images/global_nav/WB_logo.png?id=1395993244283);
+            }
+
+            .first{
+                display: inline-block;                              
+                height: 39px;
+                font-size: 18px;
+                padding-left: 150px;
+                margin: 0 0 0 150px;
+            }
+
+            .first_world{
+                background-position: right -50px;
+                overflow: hidden;
+                height: 39px;
+                padding-left: 38px;
+            }
+
+            .first_Logo{
+                background: url(https://img.t.sinajs.cn/t5/style/images/register/reg_ico.png?id=1370232467959);
+                display: inline-block;
+                width: 25px;
+                height: 29px;
+                background-position: 1px -19px;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .complete_data{
+                color:#fff;
+                line-height: 40px;
+            }
+
+            .Inroll_data{
+                width: 900px;
+                height: 450px;
+                background-color: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+                border-radius: 6px;
+                box-shadow: 0 2px 3px #98b4c4;
+            }
+
+            .Inroll_data_upward{
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 40px;
+                padding-top: 20px;
+            }
+
+            .Inroll_data_total{
+                padding-left: 200px;
+                padding-top: 50px;
+            }
+
+            .succeed{
+                float: left;
+                height: 30px;
+                width: 90px;
+                font-size: 14px;
+            }
+
+
+            .title{
+                width: 90px;
+                height: 30px;
+                text-align: right;
+            }
+
+            .Inroll_name{
+                height: 30px;
+            }
+
+            .Inroll_enter_name{
+                width: 222px;
+                margin-left: 31px;
+            }
+
+            .Inroll_gender{
+                position: relative;
+                padding-top: 40px;
+                height: 30px;
+            }
+
+            .adjust_boy{
+                margin-left:30px;
+            }
+
+            .adjust_girl{
+                margin-left:30px;
+            }
+
+            .select_location_province{
+                width: 100px;
+                height: 25px;
+                margin-left:15px;
+            }
+
+
+            .select_location_city{
+                width: 100px;
+                height: 25px;
+                margin-left:15px;
+            }
+
+            .another_web{
+                margin-left: 130px;
+                margin-top: 40px;
+                width: 230px;
+                height: 45px;
+                background-color: #ffb33b;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color:#fff;
+                border-radius: 2px;
+                box-shadow: 0 0 10px;
+                border:1px solid #ff9b01;
+            }
+        </style>
+    </head>
+    <body class="register2">
+        <div class="Inroll_upward">
+            <div class="web_Logo">
+                <div class="Logo"></div>
+            
+                <div class="first">
+                    <div class="first_world">
+                        <i class="first_Logo"></i>
+                        <i class="complete_data">完善资料</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Inroll_data">
+            <div class="Inroll_data_upward">仅需三步，完善资料，获得更符合您兴趣的微博内容！</div>
+           
+            <div class="Inroll_data_total">
+
+                    <div class="Inroll_name">
+                        <div class="succeed"></div>
+                        <span class="title">昵称：</span>
+                        <input class="Inroll_enter_name" id="UserName">
+                    </div>
+
+                    <div class="Inroll_gender">
+                        <div class="succeed"></div>                                        
+                        <span class="title">性别：</span>
+                        <input class="adjust_boy" type="radio" name="select_gender" value="boy">男
+                        <input class="adjust_girl" type="radio" name="select_gender" value="girl">女                    
+                    </div>
+
+                    <div class="Inroll_gender">
+                        <div class="succeed"></div>
+                        <span class="title">说在地：</span>
+                        <select class="select_location_province">
+                            <option value="重庆" selected>重庆</option>
+                        </select>
+                        <select class="select_location_city">
+                            <option value="九龙坡区" selected>九龙坡区</option>
+                            <option value="南岸区">南岸区</option>
+                        </select>
+                    </div>
+
+                    <input class="another_web" type="submit" value="进入兴趣推荐" onclick="show()">
+
+            </div>
+        </div>
+
+    </body>
+</html>

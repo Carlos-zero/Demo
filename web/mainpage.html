@@ -1,0 +1,272 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>主页</title>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.8/jquery.min.js"></script>/-->
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            function send_data(){
+                var telephone=document.getElementById("telephone").value;
+                var password=document.getElementById("password").value;
+                $.ajax({
+                    type:"POST",
+                    url:"/servlet/LoginServlet/",
+                    data:{
+                        'telephone':telephone,
+                        'password':password
+                    },
+                    dataType:"json",
+                    success:function(data){
+                        if(data.length>0){
+                            alert("登陆成功！");
+                            window.location.href="mypage.html";
+                        }else{
+                            alert("登陆失败，请重新登录！");
+                        }
+                    }
+                })
+            }
+        </script>
+        <style>
+            .total{
+                margin: 0;
+                padding: 0;
+            }
+
+            .upward{
+                height: 60px;
+                width: 100%;
+                border-top: 3px solid orange;
+                background-color: #ffffff;
+                box-shadow: 0 0 1px 0px rgba(0,0,0,0.15);
+                position: fixed;
+            }
+
+            .Logo{
+                float: left;
+                position: relative;
+                margin: 0;
+                margin: 0;
+            }
+
+            .Logo_web{                
+                margin-left: 100px;
+                width: 150px;
+                height: 60px;
+                background: url(https://img.t.sinajs.cn/t6/style/images/global_nav/WB_logo.png?id=1404211047727) no-repeat 0 40%;;
+            }
+
+            .Search_web{
+                float: left;
+                position: relative;
+                height: 50px;
+            }
+
+            .Search{
+                margin-left: 30px;
+                margin-top: 15px;
+                height: 30px;
+                width: 600px;
+            }
+
+            .Choose{
+                float: left;
+                position: relative;
+                height: 50px;
+                margin-left: 250px;
+            }
+
+            .Choose_option{
+                list-style: none;
+            }
+
+            .option_positition{
+                float: left;
+                width: 100px;
+                height: 50px;
+            }
+
+            .option_word{
+                font:18px bold;
+                color: #333333;
+                text-decoration: none;
+            }
+
+            .maincontent{
+                margin-left: 150px;
+                width: 100%;           
+            }
+
+            .option{
+                position: fixed;
+                width: 80px;
+                height: 1000px;
+                margin-top: 72px;
+            }
+
+            .option_{
+                list-style: none;
+                width: 100%;
+                height: 60px;
+            }
+
+            .word{
+                color: #333333;
+                line-height: 42px;
+                text-align: center;
+                font: 20px bold;
+            }
+
+            .login{
+                z-index: 1;
+                margin-right: 420px;
+                margin-top: 72px;
+                width:400px;
+                height: 350px;
+                float: right;
+                background-color: #f2f2f5;
+            }
+
+            .login_inside{
+                z-index: 2;
+                margin: 20px 50px;
+                width: 300px;
+                height: 300px;
+                background: #ffffff;
+            }
+
+            .login_box_word{
+                display: inline-block;
+                margin-left: 95px;
+                margin-top: 15px;
+                padding-bottom:10px;
+                width: 100px;
+            }
+
+            .login_word{
+                border-bottom:3px solid orange;
+                margin-top: 15px;
+                font-size:20px;
+                line-height: 33px;
+                text-align: center;
+            }
+
+            .login_position{
+                margin-top: 20px;
+            }
+
+            .login_word2{
+                line-height: 30px;
+                text-align: center;
+                font-size: 16px;
+                margin-left: 30px;
+            }
+
+            .login_botton{
+                width: 250px;
+                height: 40px;
+                margin-left: 20px;
+                margin-top: 30px;
+                background-color: #ffb33b;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                color:#fff;
+                border-radius: 2px;
+                box-shadow: 0 0 10px;
+                border:1px solid #ff9b01;
+            }
+            
+        </style>
+    </head>
+    <body style="margin:0;padding:0">
+        <div class="total">
+            <div class="upward">
+                <div class="Logo">
+                    <a href="mainpage.html">
+                        <div class="Logo_web"></div>               
+                    </a>
+                </div>
+                <form action="" method="POST" style="margin:0">
+                    <div class="Search_web">
+                        <input class="Search">
+                    </div>
+                </form>
+                <div class="Choose">
+                    <ul class="Choose_option">
+                        <div class="option_positition">
+                            <li>
+                                <a href="mainpage.html" style="text-decoration:none">
+                                    <span class="option_word">首页</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="option_positition">
+                            <li>
+                                <a href="mainpage.html" style="text-decoration:none">
+                                    <span class="option_word">视频</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="option_positition">
+                            <li>
+                                <a href="mainpage.html" style="text-decoration:none">
+                                    <span class="option_word">发现</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="option_positition">
+                            <li>
+                                <a href="mainpage.html" style="text-decoration:none">
+                                    <span class="option_word">游戏</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="option_positition">
+                            <li>
+                                <a href="register1.html" style="text-decoration:none">
+                                    <span class="option_word">注册</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="maincontent">
+                <div>
+                    <ul class="option">
+                        <div class="option_"><div class="word"><li>热门</li></div></div>
+                        <div class="option_"><div class="word"><li>头条</li></div></div>
+                        <div class="option_"><div class="word"><li>视频</li></div></div>
+                        <div class="option_"><div class="word"><li>新鲜事</li></div></div>
+                        <div class="option_"><div class="word"><li>榜单</li></div></div>
+                        <div class="option_"><div class="word"><li>搞笑</li></div></div>
+                        <div class="option_"><div class="word"><li>社会</li></div></div>
+                        <div class="option_"><div class="word"><li>时尚</li></div></div>
+                        <div class="option_"><div class="word"><li>电影</li></div></div>
+                    </ul>
+                </div>
+                <div class="login">
+                    <div class="login_inside">
+                        <div class="login_box_word">
+                            <div class="login_word">账号登录</div>
+                        </div>
+                       
+                        <div class="login_position">
+                            <span class=" login_word2">手 机 :</span>
+                            <input id="telephone" type="text" name="Name" style="margin-left:15px;width:150px">
+                        </div>
+                        <div class="login_position">
+                            <span class=" login_word2">密 码 :</span>
+                            <input id="password" type="password" name="Password" style="margin-left:15px;width:150px" onclick="send_data()">
+                        </div>
+                        <div><input type="submit" value="登录" class="login_botton" onclick="send_data()"></div>
+                        <div style="padding-top:8px;padding-left:20px;">还没有微博？<a href="register1.html" style="color:red;text-decoration: none">立即注册！</a></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

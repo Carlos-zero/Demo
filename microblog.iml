@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/web/WEB-INF/class" />
+    <output-test url="file://$MODULE_DIR$/web/WEB-INF/class" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://C:/mysql-connector-java-8.0.13" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://C:/mysql-connector-java-8.0.13/src/build/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/demo/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/generated/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/legacy/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/main/core-api/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/main/core-impl/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/main/protocol-impl/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/main/user-api/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/main/user-impl/java" />
+          <root url="file://C:/mysql-connector-java-8.0.13/src/test/java" />
+        </SOURCES>
+        <jarDirectory url="file://C:/mysql-connector-java-8.0.13" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../package/json-lib依赖jar包" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../package/json-lib依赖jar包" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>
